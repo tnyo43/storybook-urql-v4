@@ -11,6 +11,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  urql:
+    specifier: 4.0.3
+    version: 4.0.3(graphql@16.6.0)(react@18.2.0)
 
 devDependencies:
   '@storybook/react':
@@ -19,11 +22,25 @@ devDependencies:
   '@storybook/react-vite':
     specifier: 7.0.18
     version: 7.0.18(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)(vite@4.3.9)
+  '@urql/storybook-addon':
+    specifier: 2.0.1
+    version: 2.0.1(graphql@16.6.0)(react-dom@18.2.0)(react@18.2.0)
   storybook:
     specifier: 7.0.18
     version: 7.0.18
 
 packages:
+
+  /@0no-co/graphql.web@1.0.1(graphql@16.6.0):
+    resolution: {integrity: sha512-6Yaxyv6rOwRkLIvFaL0NrLDgfNqC/Ng9QOPmTmlqW4mORXMEKmh5NYGkIvvt5Yw8fZesnMAqkj8cIqTj8f40cQ==}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+    peerDependenciesMeta:
+      graphql:
+        optional: true
+    dependencies:
+      graphql: 16.6.0
+    dev: false
 
   /@ampproject/remapping@2.2.1:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
@@ -2398,6 +2415,15 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  /@emotion/use-insertion-effect-with-fallbacks@1.0.1(react@18.2.0):
+    resolution: {integrity: sha512-jT/qyKZ9rzLErtrjGgdkMBn2OP8wl0G3sQlBb3YPryvKHsjvINUhVaPFfP+fpBcOkmrVOVEEHQFJ7nbj2TH2gw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: true
+    optional: true
+
   /@esbuild/android-arm64@0.17.19:
     resolution: {integrity: sha512-KBMWvEZooR7+kzY0BtbTQn0OAYY7CsiydT63pVEaPtVYF0hXbUaOyZog37DKxK7NF3XacBJOpYT4adIJh+avxA==}
     engines: {node: '>=12'}
@@ -2692,6 +2718,21 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@storybook/addons@7.0.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-+j9ItxWoVzarbllaV4WRaJpDM3P2aC5O6F3cPn4YkG/unb6HOs11WLAqFbzZnLYZNAFvWS8PYEAtqs1BxG66YQ==}
+    requiresBuild: true
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/manager-api': 7.0.18(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.0.18
+      '@storybook/types': 7.0.18
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+    optional: true
 
   /@storybook/builder-manager@7.0.18:
     resolution: {integrity: sha512-yFMm3xuYkyg2hS1uz3CkvyvLzK7qJsDPVEh7lew8GiJK1Xx8cc+FnAOlRTjWNxvhfiT296wAMCTPWv7LeoSgqQ==}
@@ -2999,6 +3040,32 @@ packages:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
     dev: true
 
+  /@storybook/manager-api@7.0.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-anQkm09twL96YkKGXHa+LI0+yMaY6Jxs1lRaetHdMlIqN4VHBHhizHaMgtGfH6xCTuO3WdrKTN7cZii5RH7PBQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/channels': 7.0.18
+      '@storybook/client-logger': 7.0.18
+      '@storybook/core-events': 7.0.18
+      '@storybook/csf': 0.1.0
+      '@storybook/global': 5.0.0
+      '@storybook/router': 7.0.18(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/theming': 7.0.18(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.0.18
+      dequal: 2.0.3
+      lodash: 4.17.21
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      semver: 7.5.1
+      store2: 2.14.2
+      telejson: 7.1.0
+      ts-dedent: 2.2.0
+    dev: true
+    optional: true
+
   /@storybook/manager@7.0.18:
     resolution: {integrity: sha512-hasb8XDmkT9lyX2cwb3Xg0ngcNQ1QCNHKurl2YJtXowb1CvawGKokhnVUTso15NCnurolDyw/Wqka1sagfm+Mg==}
     dev: true
@@ -3115,6 +3182,20 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/router@7.0.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Mue4s/BnKgdYcsiW9yuvW3qL9k3AgYn5HIhnkBExAteyiUGdAca4IJFhArmGgFktgeLc4ecBQ7sgaCljApnbgg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/client-logger': 7.0.18
+      memoizerific: 1.11.3
+      qs: 6.11.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+    optional: true
+
   /@storybook/telemetry@7.0.18:
     resolution: {integrity: sha512-JP5Z7lGU+oKjNmz2cZW5J7EerwyWBBPOU+NvvooZsymIx02ZvJ4ClmFtolJnBM7m4KoAy50JxV5NQWi+q8PicQ==}
     dependencies:
@@ -3131,6 +3212,21 @@ packages:
       - encoding
       - supports-color
     dev: true
+
+  /@storybook/theming@7.0.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-P1gMKa/mKQHIMq0sxBIwTzAcF6v/6hrc62YmkuV62vXu+8zNV2YWbRwywqm3Q6faZEadmb/bL9+z8whaKhCL/g==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
+      '@storybook/client-logger': 7.0.18
+      '@storybook/global': 5.0.0
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+    optional: true
 
   /@storybook/types@7.0.18:
     resolution: {integrity: sha512-qPop2CbvmX42/BX29YT9jIzW2TlMcMjAE+KCpcKLBiD1oT5DJ1fhMzpe6RW9HkMegkBxjWx54iamN4oHM/pwcQ==}
@@ -3314,6 +3410,51 @@ packages:
 
   /@types/unist@2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@urql/core@3.2.2(graphql@16.6.0):
+    resolution: {integrity: sha512-i046Cz8cZ4xIzGMTyHZrbdgzcFMcKD7+yhCAH5FwWBRjcKrc+RjEOuR9X5AMuBvr8c6IAaE92xAqa4wmlGfWTQ==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.6.0
+      wonka: 6.3.2
+    dev: true
+
+  /@urql/core@4.0.8(graphql@16.6.0):
+    resolution: {integrity: sha512-8aKNAAqKqnzcE6lcUA48JepghXZC72hZePXz5sYZ//oCPodQPRcBpj+eO1QTq2t0QM32B+grzYj8xEGukgBiXQ==}
+    dependencies:
+      '@0no-co/graphql.web': 1.0.1(graphql@16.6.0)
+      wonka: 6.3.2
+    transitivePeerDependencies:
+      - graphql
+    dev: false
+
+  /@urql/devtools@2.0.3(@urql/core@3.2.2)(graphql@16.6.0):
+    resolution: {integrity: sha512-TktPLiBS9LcBPHD6qcnb8wqOVcg3Bx0iCtvQ80uPpfofwwBGJmqnQTjUdEFU6kwaLOFZULQ9+Uo4831G823mQw==}
+    requiresBuild: true
+    peerDependencies:
+      '@urql/core': '>= 1.14.0'
+      graphql: '>= 0.11.0'
+    dependencies:
+      '@urql/core': 3.2.2(graphql@16.6.0)
+      graphql: 16.6.0
+      wonka: 6.3.2
+    dev: true
+    optional: true
+
+  /@urql/storybook-addon@2.0.1(graphql@16.6.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xREwiqOJ7h48a2rI7lBXRRkecNMFN3MembiXfrdL7c3NVqgM4CYbJN5zg/Za9Nt4vAxUwNrFNu0AYw7cC1mYlA==}
+    dependencies:
+      '@urql/core': 3.2.2(graphql@16.6.0)
+      wonka: 6.3.2
+    optionalDependencies:
+      '@storybook/addons': 7.0.18(react-dom@18.2.0)(react@18.2.0)
+      '@urql/devtools': 2.0.3(@urql/core@3.2.2)(graphql@16.6.0)
+    transitivePeerDependencies:
+      - graphql
+      - react
+      - react-dom
     dev: true
 
   /@vitejs/plugin-react@3.1.0(vite@4.3.9):
@@ -4703,6 +4844,10 @@ packages:
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
+
+  /graphql@16.6.0:
+    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   /gunzip-maybe@1.4.2:
     resolution: {integrity: sha512-4haO1M4mLO91PW57BMsDFf75UmwoRX0GkdD+Faw+Lr+r/OZrOCS0pIBwOL1xCKQqnQzbNFGgK2V2CpBUPeFNTw==}
@@ -6370,6 +6515,11 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
+  /store2@2.14.2:
+    resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
+    dev: true
+    optional: true
+
   /storybook@7.0.18:
     resolution: {integrity: sha512-FXMmTiomSlLPTHty7vGLr0prPf6pCV07EwAmNOYYYTskitEYV0R7hlhawByd7HuobjIhHvSTKesa1Whl86zLNA==}
     hasBin: true
@@ -6707,6 +6857,18 @@ packages:
       picocolors: 1.0.0
     dev: true
 
+  /urql@4.0.3(graphql@16.6.0)(react@18.2.0):
+    resolution: {integrity: sha512-ynwez59f5uo31RO9/OD1RveasLGsaRC2mEm5nNGuPiQbpIeuZLQJTya61hr6I9c24YWIHf3Ld29xZy6JW3scvQ==}
+    peerDependencies:
+      react: '>= 16.8.0'
+    dependencies:
+      '@urql/core': 4.0.8(graphql@16.6.0)
+      react: 18.2.0
+      wonka: 6.3.2
+    transitivePeerDependencies:
+      - graphql
+    dev: false
+
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
@@ -6845,6 +7007,9 @@ packages:
     dependencies:
       string-width: 4.2.3
     dev: true
+
+  /wonka@6.3.2:
+    resolution: {integrity: sha512-2xXbQ1LnwNS7egVm1HPhW2FyKrekolzhpM3mCwXdQr55gO+tAiY76rhb32OL9kKsW8taj++iP7C6hxlVzbnvrw==}
 
   /word-wrap@1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
